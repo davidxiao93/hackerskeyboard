@@ -1,4 +1,10 @@
-[![Build Status](https://travis-ci.org/nlpguyz/hackerskeyboard.svg?branch=gradle)](https://travis-ci.org/nlpguyz/hackerskeyboard)
+This is a forked version of HackersKeyboard. 
+
+The changes made to this are to disable some of the keyboard modes, as I personally dislike most of them.
+
+Forked from: [https://github.com/nlpguyz/hackerskeyboard](https://github.com/nlpguyz/hackerskeyboard)
+
+Original Readme follows:
 
 ## Overview ##
 

@@ -411,35 +411,18 @@ public class KeyboardSwitcher implements
         case MODE_NONE:
             LatinImeLogger.logOnWarning("getKeyboardId:" + mode + ","
                     + imeOptions + "," + isSymbols);
-            /* fall through */
-        case MODE_TEXT:
-            return new KeyboardId(keyboardRowsResId,
-                    mHasSettingsKey ? KEYBOARDMODE_NORMAL_WITH_SETTINGS_KEY
-                            : KEYBOARDMODE_NORMAL, true, hasVoice);
+            return null;
         case MODE_SYMBOLS:
             return new KeyboardId(KBD_SYMBOLS,
                     mHasSettingsKey ? KEYBOARDMODE_SYMBOLS_WITH_SETTINGS_KEY
                             : KEYBOARDMODE_SYMBOLS, false, hasVoice);
         case MODE_PHONE:
             return new KeyboardId(KBD_PHONE, 0, false, hasVoice);
-        case MODE_URL:
+        default:
             return new KeyboardId(keyboardRowsResId,
-                    mHasSettingsKey ? KEYBOARDMODE_URL_WITH_SETTINGS_KEY
-                            : KEYBOARDMODE_URL, true, hasVoice);
-        case MODE_EMAIL:
-            return new KeyboardId(keyboardRowsResId,
-                    mHasSettingsKey ? KEYBOARDMODE_EMAIL_WITH_SETTINGS_KEY
-                            : KEYBOARDMODE_EMAIL, true, hasVoice);
-        case MODE_IM:
-            return new KeyboardId(keyboardRowsResId,
-                    mHasSettingsKey ? KEYBOARDMODE_IM_WITH_SETTINGS_KEY
-                            : KEYBOARDMODE_IM, true, hasVoice);
-        case MODE_WEB:
-            return new KeyboardId(keyboardRowsResId,
-                    mHasSettingsKey ? KEYBOARDMODE_WEB_WITH_SETTINGS_KEY
-                            : KEYBOARDMODE_WEB, true, hasVoice);
+                    mHasSettingsKey ? KEYBOARDMODE_NORMAL_WITH_SETTINGS_KEY
+                            : KEYBOARDMODE_NORMAL, true, hasVoice);
         }
-        return null;
     }
 
     public int getKeyboardMode() {
